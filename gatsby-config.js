@@ -14,11 +14,8 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-google-fonts',
 			options: {
-				fonts: [
-					'Cairo',
-					'Roboto'
-				]
-			}
+				fonts: ['Open Sans', 'Raleway'],
+			},
 		},
 		{
 			resolve: 'gatsby-plugin-canonical-urls',
@@ -58,13 +55,13 @@ module.exports = {
 				display: 'minimal-ui',
 				icons: [
 					{
-						src: '/favicon/logo-192x192.png',
+						src: '/favicon/android-icon-192x192.png',
 						sizes: '192x192',
 						type: 'image/png',
 					},
 					{
-						src: '/favicon/logo-512x512.png',
-						sizes: '512x512',
+						src: 'ms-icon-310x310.png',
+						sizes: '310x310',
 						type: 'image/png',
 					},
 				],

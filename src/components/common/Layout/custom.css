@@ -1,0 +1,16 @@
+.products-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    /*align-content: space-around;*/
+}
+.product {
+    width: 200px;  /* Or whatever */
+    height: 40px; /* Or whatever */
+    margin: auto;  /* Magic! */
+    line-height: 14px;
+}
+
+.address-h{
+    display: none;
+}
