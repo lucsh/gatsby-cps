@@ -52,7 +52,7 @@ const FooterSection = () => {
 								</FormattedMessage>
 								<hr />
 								<p>
-									<h6>Chemical Products Suppliers LLC</h6>
+									<strong>Chemical Products Suppliers LLC</strong>
                 EIN (Tax ID) 30-1071000
 									<br />
                 1400 Broadfield Blvd

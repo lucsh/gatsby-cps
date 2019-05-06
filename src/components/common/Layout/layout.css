@@ -219,9 +219,9 @@ hr.short-thick {
 }
 .v-align-transform {
   position: relative;
-  transform: translate3d(0, -50%, 0);
-  -webkit-transform: translate3d(0, -50%, 0);
-  top: 50%;
+  transform: translate3d(0, -40%, 0);
+  -webkit-transform: translate3d(0, -40%, 0);
+  top: 40%;
   z-index: 2;
 }
 .align-bottom {
@@ -908,9 +908,30 @@ nav .btn,
   display: inline-block;
   height: 55px;
 }
+
 .logo {
-  max-height: 60%;
+  margin-left: 50px;
+  margin-right: 24px;
+  max-height: 150%;
+  transition: all 1s ease-in-out;
+  position: absolute;
+  top: 250px;
 }
+
+.scrolled-logo-container{
+  position: fixed;
+  width: 100%;
+  background: rgba(4, 4, 45,1);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.scrolled.logo  {
+  position: inherit;
+  max-height: 60% !important;
+}
+
 .logo-light {
   display: none;
 }
