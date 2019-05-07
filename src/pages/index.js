@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Parallax } from 'react-parallax';
+import { window, document } from 'browser-monads';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import { FormattedMessage } from 'react-intl'
@@ -18,10 +19,10 @@ import FooterSection from '../sections/footer';
 
 
 function useWindowWidth() {
-	const [scroll, setScroll] = useState(document.documentElement.scrollTop);
+	const [scroll, setScroll] = useState(window.scrollTop);
 
 	useEffect(() => {
-		const handleScroll = () => setScroll(document.documentElement.scrollTop);
+		const handleScroll = () => setScroll(window.scrollTop);
 		document.addEventListener('scroll', handleScroll);
 		return () => {
 			document.removeEventListener('scroll', handleScroll);
