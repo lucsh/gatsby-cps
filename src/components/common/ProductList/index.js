@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 
 class ProductList extends Component {
@@ -6,7 +6,12 @@ class ProductList extends Component {
 		return (
 			<div className="products-container">
 				<FormattedMessage id="products_list">
-					{(content) => content.map((producto) => <span key={producto} className="product">{producto}</span>)}
+					{(content) => {
+						// 'content' esta guardado como string separado por comas,
+						// para cumplir con el type de react int, lo convierto a
+						// array (split en el string) antes de tratarlo
+						const contentArray = content.split(',');
+						return contentArray.map((producto) => <span key={producto} className="product">{producto}</span>) }}
 				</FormattedMessage>
 			</div>
 		);
