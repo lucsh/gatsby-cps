@@ -20,9 +20,6 @@ import FooterSection from '../sections/footer';
 import logoLight from '../images/logo_hor_light.png'
 
 
-const asd = React.createRef();
-
-
 function useWindowScroll() {
 	const [scroll, setScroll] = useState(document.documentElement.scrollTop);
 
@@ -40,12 +37,6 @@ function useWindowScroll() {
 
 function IndexPage() {
 	const scroll = useWindowScroll(); // Our custom Hook
-	const bgScroll = asd.current && asd.current.getBoundingClientRect().top
-	console.log('< asd');
-	console.log(scroll);
-	console.log(bgScroll);
-	console.log(scroll - bgScroll);
-	console.log('asd />');
 	return (
 		<Layout>
 			<React.Fragment>
@@ -57,7 +48,7 @@ function IndexPage() {
 					bgImageAlt="hero-image"
 					strength={200}
 				>
-					<section ref={asd} className="fullscreen image-bg">
+					<section className="fullscreen image-bg">
 						<div className={scroll > 20 ? 'scrolled' : ''}>
 
 							<div className="logo-container">
