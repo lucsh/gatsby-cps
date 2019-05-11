@@ -180,6 +180,13 @@ hr.short-thick {
   }
 }
 /*!---------- 2. MIXINS ----------*/
+
+.react-parallax-bgimage{
+    transition: transform  cubic-bezier(0.32, 0.28, 0.79, 1.01) 0.5s
+}
+.react-parallax-content{
+    /*height: 100vh;*/
+}
 .v-align-children {
   display: -webkit-flex;
   display: -moz-flex;
@@ -909,27 +916,40 @@ nav .btn,
   height: 55px;
 }
 
-.logo {
-  margin-left: 50px;
-  margin-right: 24px;
-  max-height: 150%;
-  transition: all 1s ease-in-out;
-  position: absolute;
-  top: 250px;
-}
+
 
 .scrolled-logo-container{
   position: fixed;
+ top:0;
+  left: 0;
   width: 100%;
-  background: rgba(4, 4, 45,1);
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  z-index: 1000;
 }
 
-.scrolled.logo  {
-  position: inherit;
-  max-height: 60% !important;
+.logo-container{
+margin-top:20px
+}
+.logo h1, .logo h2{
+  line-height: 1em;
+   margin-bottom: 0;
+}
+.logo img{
+  max-width: 40vw;
+}
+.logo  {
+  max-height: 52px;
+  max-width: 70vw;
+  height: auto;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+  transform-origin: left top;
+  transform: translate3d(10px, 150px, 0px) scale(2);
+}
+
+.scrolled.logo {
+  transform: translate3d(10px, -0px, 0px) scale(1);
 }
 
 .logo-light {
@@ -3080,7 +3100,7 @@ button[type="submit"] .form-loading {
 }
 /*!---------- 22. IMAGE TILES ----------*/
 img {
-  max-width: 100%;
+  /*max-width: 100%;*/
 }
 .image-tile {
   overflow: hidden;

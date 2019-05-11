@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react'
 import { Parallax } from 'react-parallax';
-import { window, document } from 'browser-monads';
+import { document } from 'browser-monads'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import { FormattedMessage } from 'react-intl'
+import { Link } from 'gatsby'
 import { Layout } from '../components/common';
 import SEO from '../components/common/SEO';
 import Header from '../components/theme/Header';
@@ -16,13 +17,17 @@ import About from '../sections/about';
 import Products from '../sections/products';
 import Separator from '../sections/separator';
 import FooterSection from '../sections/footer';
+import logoLight from '../images/logo_hor_light.png'
 
 
-function useWindowWidth() {
-	const [scroll, setScroll] = useState(window.scrollTop);
+const asd = React.createRef();
+
+
+function useWindowScroll() {
+	const [scroll, setScroll] = useState(document.documentElement.scrollTop);
 
 	useEffect(() => {
-		const handleScroll = () => setScroll(window.scrollTop);
+		const handleScroll = () => setScroll(document.documentElement.scrollTop);
 		document.addEventListener('scroll', handleScroll);
 		return () => {
 			document.removeEventListener('scroll', handleScroll);
@@ -32,36 +37,42 @@ function useWindowWidth() {
 	return scroll;
 }
 
+
 function IndexPage() {
-	const scroll = useWindowWidth(); // Our custom Hook
+	const scroll = useWindowScroll(); // Our custom Hook
+	const bgScroll = asd.current && asd.current.getBoundingClientRect().top
+	console.log('< asd');
+	console.log(scroll);
+	console.log(bgScroll);
+	console.log(scroll - bgScroll);
+	console.log('asd />');
 	return (
 		<Layout>
 			<React.Fragment>
 				<SEO title="welcome" />
 				<Header scroll={scroll} />
+				<div style={{ width: '100px' }} />
 				<Parallax
-					renderLayer={(percentage) => (
-						<div
-							style={{
-								position: 'absolute',
-								background: `rgba(4, 4, 45, ${percentage * 1.25})`,
-								left: '0',
-								top: '0',
-								width: '100%',
-								height: '100%',
-							}}
-						/>
-					)}
 					bgImage={hero}
-					bgImageAlt="hero image"
-					strength={100}
+					bgImageAlt="hero-image"
+					strength={200}
 				>
-					<section className="fullscreen image-bg  ">
+					<section ref={asd} className="fullscreen image-bg">
+						<div className={scroll > 0 ? 'scrolled-logo-container' : 'logo-container'}>
+							<div className={scroll > 0 ? 'scrolled logo' : 'logo'}>
+								<Link to="/">
+									<h1><img alt="CPS" src={logoLight} /></h1>
+									<h2 className="thin" style={{ fontSize: '1em' }}>Confidence – Productive – Sustainable</h2>
+
+								</Link>
+							</div>
+						</div>
 						<div className="container v-align-transform">
 							<div className="row">
 								<div className="col-sm-12">
-									{/*<h1 className="mb0">Chemical Products Suppliers</h1>*/}
-									<h2 className="thin">Confidence – Productive – Sustainable</h2>
+									{/* <h1 className="mb0">Chemical Products Suppliers</h1> */}
+
+
 								</div>
 							</div>
 						</div>
