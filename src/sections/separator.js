@@ -7,7 +7,7 @@ const Separator = ({ image, imageAlt }) => (
 		bgImageAlt={imageAlt}
 		strength={200}
 	>
-		<div style={{ height: '200px' }} />
+		<div style={{ height: '260px' }} />
 	</Parallax>
 );
 

@@ -917,39 +917,56 @@ nav .btn,
 }
 
 
-
-.scrolled-logo-container{
+.scrolled .logo-container{
   position: fixed;
- top:0;
+  top:0;
   left: 0;
+  background: rgba(0,20,80,0.8);
   width: 100%;
+  max-width: 100%;
   margin: 0 auto;
+  padding: 20px;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  /*justify-content: center;*/
   z-index: 1000;
+
 }
 
 .logo-container{
-margin-top:20px
+ margin:20px;
+  /*max-width: 50%;*/
+
 }
+
+.scrolled .logo h1, .logo h2 {
+  line-height: 1.6em;
+  /*font-size: 0.5em;*/
+}
+
+
 .logo h1, .logo h2{
   line-height: 1em;
-   margin-bottom: 0;
+  /*font-size: 1.2em;*/
+  margin-bottom: 0;
 }
+
 .logo img{
-  max-width: 40vw;
+  /*max-width: 40vw;*/
+  max-width: 100%;
 }
+
 .logo  {
-  max-height: 52px;
+  max-height: 53px;
   max-width: 70vw;
   height: auto;
   transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
   transform-origin: left top;
-  transform: translate3d(10px, 150px, 0px) scale(2);
+  transform: translate3d(10px, 50px, 0px) scale(1);
 }
 
-.scrolled.logo {
-  transform: translate3d(10px, -0px, 0px) scale(1);
+.scrolled .logo {
+  transform: translate3d(0px, -5px, 0px) scale(0.33);
 }
 
 .logo-light {

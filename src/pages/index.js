@@ -58,23 +58,20 @@ function IndexPage() {
 					strength={200}
 				>
 					<section ref={asd} className="fullscreen image-bg">
-						<div className={scroll > 0 ? 'scrolled-logo-container' : 'logo-container'}>
-							<div className={scroll > 0 ? 'scrolled logo' : 'logo'}>
-								<Link to="/">
-									<h1><img alt="CPS" src={logoLight} /></h1>
-									<h2 className="thin" style={{ fontSize: '1em' }}>Confidence – Productive – Sustainable</h2>
+						<div className={scroll > 20 ? 'scrolled' : ''}>
 
-								</Link>
-							</div>
-						</div>
-						<div className="container v-align-transform">
-							<div className="row">
-								<div className="col-sm-12">
-									{/* <h1 className="mb0">Chemical Products Suppliers</h1> */}
-
-
+							<div className="logo-container">
+								<div className="logo">
+									<Link to="/">
+										<h1><img alt="CPS" src={logoLight} /></h1>
+										<h2 className="thin">Confidence – Productive – Sustainable</h2>
+									</Link>
 								</div>
 							</div>
+						</div>
+
+						<div className="container v-align-transform">
+							<div className="row" />
 						</div>
 						<div className="align-bottom text-center">
 							<FormattedMessage id="get_to_know_us">
