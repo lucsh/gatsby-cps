@@ -65,7 +65,7 @@ const FooterSection = () => {
 								</p>
 								<hr />
 								<p>
-									<strong>E:</strong> hello@cps.net
+									<strong>E:</strong> info@cpsamericas.com
 									<br />
 									<strong>P:</strong> +1 713 248 9523
 									<br />

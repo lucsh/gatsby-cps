@@ -34,7 +34,7 @@
 
         // Set the recipient email address.
 
-        $recipient = "me@luc.sh";
+        $recipient = "info@cpsamericas.com";
 
         // Set the email subject.
         $subject = "New contact from: $name - $company";
