@@ -921,7 +921,8 @@ nav .btn,
   position: fixed;
   top:0;
   left: 0;
-  background: rgba(0,20,80,0.8);
+
+  background: rgba(17,18,29,0.8);
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
