@@ -5,7 +5,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { Context } from '../../common';
 import SelectLanguage from './SelectLanguage';
 // import logoDark from '../../../images/logo_hor.png';
-import logoLight from '../../../images/logo_hor_light.png';
+// import logoLight from '../../../images/logo_hor_light.png';
 
 const Header = () => {
 	return (
@@ -26,7 +26,7 @@ const Header = () => {
 									<li>
 										<FormattedMessage id="about">
 											{(about) => (
-												<AnchorLink href="#about">
+												<AnchorLink offset="93" href="#about">
 													{about}
 												</AnchorLink>
 											)}
@@ -35,7 +35,7 @@ const Header = () => {
 									<li>
 										<FormattedMessage id="products">
 											{(products) => (
-												<AnchorLink href="#products">
+												<AnchorLink offset="93" href="#products">
 													{products}
 												</AnchorLink>
 											)}
