@@ -953,7 +953,9 @@ nav .btn,
   line-height: 1.6em;
   /*font-size: 0.5em;*/
 }
-
+.logo h2{
+  margin-left:14%;
+}
 
 .logo h1, .logo h2{
   line-height: 1em;
