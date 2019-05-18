@@ -1,6 +1,7 @@
 import React, { useState }  from 'react';
 import { FormattedMessage } from 'react-intl';
 import axios from 'axios';
+import logoLight from '../images/logo_cps-blanco.png'
 
 const API_PATH = './mailer.php';
 
@@ -52,8 +53,10 @@ const FooterSection = () => {
 								</FormattedMessage>
 								<hr />
 								<p>
-									<strong>Chemical Products Suppliers LLC</strong>
-                EIN (Tax ID) 30-1071000
+
+									<strong><img className="logo-footer" alt="CPS" src={logoLight} />Chemical Products Suppliers LLC</strong>
+
+									EIN (Tax ID) 30-1071000
 									<br />
                 1400 Broadfield Blvd
 									<br />
