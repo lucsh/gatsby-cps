@@ -55,6 +55,7 @@ const FooterSection = () => {
 								<p>
 
 									<strong><img className="logo-footer" alt="CPS" src={logoLight} />Chemical Products Suppliers LLC</strong>
+									<br />
 
 									EIN (Tax ID) 30-1071000
 									<br />
