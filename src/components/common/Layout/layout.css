@@ -420,9 +420,14 @@ p{
   font-weight: 400;
 }
 p.lead {
+  text-align: justify;
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
+}
+
+p.lead span{
+  text-align: justify;
 }
 .sub {
   font-size: 12px;
