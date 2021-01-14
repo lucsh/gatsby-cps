@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Ismail Ghallou <ismai23l@hotmail.com>",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-plugin-styled-components": "^1.8.0",
     "bootstrap": "^4.3.1",
     "browser-monads": "^1.0.0",
